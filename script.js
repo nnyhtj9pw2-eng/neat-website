@@ -59,30 +59,4 @@ document.addEventListener("click", e=>{
   if (e.target.classList.contains("modal")) e.target.classList.remove("open");
 });
 
-$("#editOpen").addEventListener("click", ()=>{
-  $("#editor").classList.add("open"); $("#editorBackdrop").classList.add("open"); $("#editor").setAttribute("aria-hidden","false");
-});
-$("#editClose").addEventListener("click", closeEditor);
-$("#editorBackdrop").addEventListener("click", closeEditor);
-function closeEditor(){ $("#editor").classList.remove("open"); $("#editorBackdrop").classList.remove("open"); }
-
-$("#saveEdit").addEventListener("click", ()=>{
-  data = {
-    heroTag: $("#eHeroTag").value.trim(),
-    heroText: $("#eHeroText").value.trim(),
-    mission: $("#eMission").value.trim(),
-    eventTitle: $("#eEventTitle").value.trim(),
-    eventDate: $("#eEventDate").value.trim(),
-    qrUrl: $("#eQrUrl").value.trim() || defaults.qrUrl,
-    qrLabel: $("#eQrLabel").value.trim()
-  };
-  localStorage.setItem("naetDemo", JSON.stringify(data));
-  render();
-  closeEditor();
-});
-
-$("#resetEdit").addEventListener("click", ()=>{
-  localStorage.removeItem("naetDemo"); data={...defaults}; render();
-});
-
 render();

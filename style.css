@@ -16,8 +16,6 @@ button{font:inherit}
 .brand span,.giant-logo span{letter-spacing:-.02em}
 .nav nav{display:flex;gap:25px;font-size:11px}
 .nav nav a:hover,.footer-links a:hover{color:var(--white)}
-.nav-join,.edit-trigger{background:none;border:1px solid var(--orange);color:var(--orange);border-radius:20px;padding:9px 18px;font-size:11px;cursor:pointer}
-.edit-trigger{border-radius:4px;padding:8px 10px;font-size:9px}
 .section-pad{padding:38px 48px}
 .hero{min-height:530px;display:grid;grid-template-columns:1.05fr 1.2fr .36fr;gap:22px;position:relative}
 .giant-logo{font-size:92px;line-height:.9;margin:0 0 18px}
@@ -50,12 +48,8 @@ button{font:inherit}
 .map-copy{padding-left:48px}
 .map-copy p{max-width:250px}
 .germany-map{border-left:1px solid var(--line);border-right:1px solid var(--line);position:relative;display:flex;justify-content:center;align-items:center}
-.germany-map svg{width:245px;height:290px}
-.country{fill:none;stroke:var(--white);stroke-width:2}
-.routes line{stroke:var(--orange);stroke-width:1.2;opacity:.8}
-.pins circle{fill:var(--orange)}
-.map-city{position:absolute;font-size:8px;color:var(--white);opacity:.9}
-.c1{top:58px;right:55px}.c2{top:108px;right:74px}.c3{top:151px;left:48px}.c4{bottom:75px;left:68px}.c5{bottom:48px;right:65px}
+.germany-map{overflow:hidden;padding:0;display:flex;align-items:center;justify-content:center}
+.germany-map img{width:100%;height:100%;object-fit:cover;display:block}
 .event-feature{display:flex;flex-direction:column;gap:15px}
 .event-img{height:130px}
 .eyebrow{font-size:10px;display:flex;justify-content:space-between}
@@ -94,12 +88,9 @@ footer small:last-child{text-align:right}
 .modal-box{background:var(--blue);border:1px solid var(--orange);padding:35px;max-width:430px;width:100%;position:relative}
 .modal-box h2{font-size:25px}.close{position:absolute;right:15px;top:12px;background:none;border:0;color:var(--orange);font-size:24px;cursor:pointer}
 .modal-qr{margin:20px auto}
-.editor{position:fixed;right:-420px;top:0;width:min(420px,100%);height:100vh;background:#062f99;color:var(--white);z-index:100;padding:25px;transition:right .25s;overflow:auto;border-left:1px solid var(--orange)}
-.editor.open{right:0}.editor-head{display:flex;justify-content:space-between;color:var(--orange);font-family:"Archivo Black";font-size:20px}.editor-head button{background:none;border:0;color:var(--orange);font-size:25px;cursor:pointer}
-.editor-note{font-size:9px;line-height:1.5;color:#ddd}.editor label{display:block;font-size:9px;color:var(--orange);margin:17px 0 6px}.editor input,.editor textarea{width:100%;background:#052b8d;border:1px solid rgba(255,138,0,.65);color:var(--white);padding:10px;font:inherit;font-size:10px}.editor textarea{min-height:75px;resize:vertical}.editor-actions{display:flex;gap:8px;margin-top:25px}.editor small{font-size:8px;line-height:1.5;color:#ccc}.editor-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.35);z-index:90;display:none}.editor-backdrop.open{display:block}
 
 @media(max-width:900px){
-  .nav{padding:0 20px;gap:12px}.nav nav{display:none}.edit-trigger{display:none}
+  .nav{padding:0 20px;gap:12px}.nav nav{display:none}
   .section-pad,.grid-section{padding:28px 20px}
   .hero{grid-template-columns:1fr;min-height:auto}.hero-image{min-height:310px;order:2}.hero-side{display:none}.giant-logo{font-size:70px}
   .grid-section,.locations,.qr-section{grid-template-columns:1fr}.side-word{display:none}
