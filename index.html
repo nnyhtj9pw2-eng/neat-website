@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0639b9">
+  <title>N_AET — Architecture Network</title>
+  <meta name="description" content="N_AET — Netzwerk für Architektur, Stadtplanung und Landschaftsarchitektur.">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="site-shell">
+
+    <header class="nav">
+      <a class="brand" href="#top" aria-label="N_AET home">N<span>_</span>AET</a>
+      <nav>
+        <a href="#mission">About</a>
+        <a href="#events">Events</a>
+        <a href="#map">Map</a>
+        <a href="#modules">Module</a>
+        <a href="#community">Community</a>
+        <a href="#join">Get Involved</a>
+      </nav>
+      <button class="nav-join" data-modal="joinModal">JOIN NOW <span>↗</span></button>
+      <button class="edit-trigger" id="editOpen" title="Edit demo">EDIT</button>
+    </header>
+
+    <main id="top">
+
+      <section class="hero section-pad">
+        <div class="hero-copy">
+          <div class="giant-logo">N<span>_</span>AET</div>
+          <h1 id="heroTag">NETWORKING<br>ARCHITECTURE<br>TOGETHER</h1>
+          <p id="heroText">Das Netzwerk für Architektur, Stadtplanung und Landschaftsarchitektur – über Universitäten hinweg.</p>
+          <div class="actions">
+            <a class="btn primary" href="#community">TEIL DER COMMUNITY WERDEN <span>↗</span></a>
+            <a class="btn" href="#mission">MEHR ERFAHREN <span>↗</span></a>
+          </div>
+        </div>
+        <div class="hero-image image-card">
+          <img src="assets/hero.jpg" alt="Studierende mit Blick auf eine Stadt">
+          <div class="image-label left">ARCHITECTURE<br>CONNECTS</div>
+          <div class="image-label right">STUDENTS<br>CITIES<br>DISCIPLINES<br>FUTURES</div>
+        </div>
+        <div class="hero-side">DIFFERENT<br>UNIVERSITIES<br>SAME PASSION</div>
+      </section>
+
+      <section class="mission grid-section" id="mission">
+        <div class="section-title">
+          <span>UNSERE</span><br>MISSION
+          <i></i>
+        </div>
+        <div class="mission-text">
+          <p id="missionText">N_AET bringt Studierende der Architektur, Stadtplanung und Landschaftsarchitektur aus verschiedenen Universitäten zusammen. Wir schaffen Raum für Austausch, gemeinsames Lernen, Exkursionen und neue Perspektiven – damit die besten Ideen im Miteinander entstehen.</p>
+          <div class="feature-row">
+            <div><b>[ ]</b><small>Vernetzen</small></div>
+            <div><b>[ ]</b><small>Austauschen</small></div>
+            <div><b>[ ]</b><small>Gemeinsam lernen</small></div>
+            <div><b>[ ]</b><small>Exkursionen</small></div>
+            <div><b>[ ]</b><small>Events</small></div>
+            <div><b>[ ]</b><small>Möglichkeiten schaffen</small></div>
+          </div>
+        </div>
+        <div class="side-word">CONNECT<br>LEARN<br>EXPLORE<br>SHARE<br>CREATE<i></i></div>
+      </section>
+
+      <section class="locations" id="map">
+        <div class="map-copy">
+          <div class="section-title">ALLE<br>STANDORTE<br>AUF EINEN BLICK<i></i></div>
+          <p>Entdecke alle Städte in Deutschland, an denen du Architektur, Stadtplanung oder Landschaftsarchitektur studieren kannst – und finde deine nächsten Connections.</p>
+          <a class="btn" href="#map">KARTE ENTDECKEN <span>↗</span></a>
+        </div>
+        <div class="germany-map" aria-label="Interactive Germany map">
+          <svg viewBox="0 0 280 320" role="img">
+            <path class="country" d="M88 15l29 8 8 18 22 6 5 22 29 10 5 29 31 13-5 26 19 20-11 24 12 28-18 20-8 33-25 6-20 29-25-12-25 6-18-19-24 3-17-21 4-26-18-20 7-22-12-22 18-21-7-29 21-19-4-25 24-14 4-20z"/>
+            <g class="routes">
+              <line x1="91" y1="68" x2="156" y2="112"/><line x1="156" y1="112" x2="103" y2="166"/>
+              <line x1="103" y1="166" x2="61" y2="222"/><line x1="103" y1="166" x2="181" y2="205"/>
+              <line x1="181" y1="205" x2="210" y2="142"/><line x1="181" y1="205" x2="145" y2="270"/>
+              <line x1="61" y1="222" x2="145" y2="270"/>
+            </g>
+            <g class="pins">
+              <circle cx="91" cy="68" r="5"/><circle cx="156" cy="112" r="5"/><circle cx="103" cy="166" r="5"/>
+              <circle cx="61" cy="222" r="5"/><circle cx="181" cy="205" r="5"/><circle cx="210" cy="142" r="5"/><circle cx="145" cy="270" r="5"/>
+            </g>
+          </svg>
+          <div class="map-city c1">Berlin</div><div class="map-city c2">Hannover</div><div class="map-city c3">Frankfurt</div>
+          <div class="map-city c4">Stuttgart</div><div class="map-city c5">München</div>
+        </div>
+
+        <div class="event-feature" id="events">
+          <div class="image-card event-img"><img src="assets/event.jpg" alt="City view"></div>
+          <div class="event-content">
+            <div class="eyebrow">UPCOMING EVENTS <a href="#events">ALLE EVENTS →</a></div>
+            <h2 id="eventTitle">MEET UP FRANKFURT</h2>
+            <p class="event-meta">▣ <span id="eventDate">Sa. 18. Nov. 2026</span><br>⌖ Frankfurt am Main</p>
+            <p>Treffe Studierende aus verschiedenen Universitäten bei einem gemeinsamen Stadtspaziergang, Inputs und einem entspannten Get-Together.</p>
+            <button class="btn" data-modal="eventModal">ZUM EVENT <span>↗</span></button>
+          </div>
+        </div>
+      </section>
+
+      <section class="modules grid-section" id="modules">
+        <div>
+          <div class="section-title">BEISPIELMODULE<i></i></div>
+          <div class="module-list">
+            <button>Rhino <span>→</span></button>
+            <button>Adobe Programme <small>z. B. Photoshop, InDesign …</small><span>→</span></button>
+            <button>Archicad <span>→</span></button>
+            <button>Vectorworks <span>→</span></button>
+            <button>Lumion <span>→</span></button>
+          </div>
+        </div>
+        <div class="module-image image-card"><img src="assets/modules.jpg" alt="Students working together"></div>
+        <div class="side-word">TOOLS<br>KNOWLEDGE<br>SKILLS<br>SHARING<i></i></div>
+      </section>
+
+      <section class="community grid-section" id="community">
+        <div>
+          <div class="section-title">UNSERE<br>WHATSAPP<br>GRUPPEN<i></i></div>
+          <p>Tritt der passenden Gruppe bei und bleib mit der Community in Kontakt.</p>
+          <a class="btn" href="#community">ZU DEN GRUPPEN <span>↗</span></a>
+        </div>
+        <div class="group-grid">
+          <a href="#join">◯ &nbsp; Allgemein</a><a href="#events">▣ &nbsp; Events</a><a href="#join">◎ &nbsp; Exchange</a>
+          <a href="#join">♧ &nbsp; Initiativen</a><a href="#modules">▤ &nbsp; Lehre</a><a href="#join">♙ &nbsp; Meet up</a>
+          <a href="#join">⚙ &nbsp; Orga</a><a href="#join">◎ &nbsp; Social Media</a><a href="#join">♡ &nbsp; Sponsor</a>
+          <a href="#join">△ &nbsp; Trip</a><a href="#join">□ &nbsp; Talks</a><a href="#join">☆ &nbsp; Ambassador</a>
+        </div>
+      </section>
+
+      <section class="join-banner" id="join">
+        <div class="banner-image"><img src="assets/footer.jpg" alt="Students on a building"></div>
+        <div class="banner-copy">
+          <div class="side-word">DIFFERENT<br>UNIVERSITIES<br>SAME PASSION<i></i></div>
+          <button class="btn" data-modal="joinModal">JETZT MITMACHEN <span>↗</span></button>
+        </div>
+      </section>
+
+      <section class="qr-section">
+        <div>
+          <div class="section-title">SCAN &<br>CONNECT<i></i></div>
+          <p>QR-Code für Join-Link, WhatsApp-Gruppe oder Instagram – im Edit-Modus frei änderbar.</p>
+        </div>
+        <div class="qr-card">
+          <div id="qrcode"></div>
+          <div><strong>JOIN N_AET</strong><span id="qrLabel">WhatsApp / Community</span></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="brand">N<span>_</span>AET</div>
+      <div class="footer-links"><a href="#mission">About</a><a href="#events">Events</a><a href="#map">Map</a><a href="#modules">Module</a><a href="#community">Community</a><a href="#join">Kontakt</a></div>
+      <div class="social">◎　▶　in</div>
+      <small>© 2026 N_AET. Von Studierenden. Für Studierende.</small>
+      <small>Impressum　 Datenschutz</small>
+    </footer>
+  </div>
+
+  <!-- Modals -->
+  <div class="modal" id="joinModal" aria-hidden="true">
+    <div class="modal-box">
+      <button class="close">×</button>
+      <div class="section-title">JOIN<br>N_AET<i></i></div>
+      <p>Scan the QR code or use the demo link to join the community.</p>
+      <div id="modalQR" class="modal-qr"></div>
+      <button class="btn primary close">SCHLIESSEN</button>
+    </div>
+  </div>
+
+  <div class="modal" id="eventModal" aria-hidden="true">
+    <div class="modal-box">
+      <button class="close">×</button>
+      <div class="eyebrow">UPCOMING EVENT</div>
+      <h2 id="modalEventTitle">MEET UP FRANKFURT</h2>
+      <p id="modalEventDate">Sa. 18. Nov. 2026 · Frankfurt am Main</p>
+      <p>Ein kleines, interaktives Event-Konzept für den Professoren-Pitch: Anmeldung, Ort, Zeit und Beschreibung können später direkt angepasst werden.</p>
+      <button class="btn primary close">SCHLIESSEN</button>
+    </div>
+  </div>
+
+  <!-- Demo editor -->
+  <aside class="editor" id="editor" aria-hidden="true">
+    <div class="editor-head"><strong>EDIT DEMO</strong><button id="editClose">×</button></div>
+    <p class="editor-note">Ändere Inhalte live. Die Änderungen werden im Browser gespeichert.</p>
+    <label>Hero headline<textarea id="eHeroTag"></textarea></label>
+    <label>Hero text<textarea id="eHeroText"></textarea></label>
+    <label>Mission<textarea id="eMission"></textarea></label>
+    <label>Event title<input id="eEventTitle"></label>
+    <label>Event date<input id="eEventDate"></label>
+    <label>QR link<input id="eQrUrl" placeholder="https://..."></label>
+    <label>QR label<input id="eQrLabel"></label>
+    <div class="editor-actions"><button class="btn primary" id="saveEdit">SAVE CHANGES</button><button class="btn" id="resetEdit">RESET</button></div>
+    <small>Für GitHub Pages reicht ein einfacher Upload dieses Ordners.</small>
+  </aside>
+  <div class="editor-backdrop" id="editorBackdrop"></div>
+</body>
+</html>
